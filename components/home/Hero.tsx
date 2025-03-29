@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="relative w-full h-[70vh] min-h-[500px] flex items-center justify-center text-center">
+    <section className="relative w-full h-[90vh] min-h-[500px] flex items-center justify-center text-center">
       {/* Dark overlay for text contrast over parallax bg */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-background/95"></div>
 
