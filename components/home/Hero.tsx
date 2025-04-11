@@ -1,34 +1,37 @@
 import { Button } from "@/components/ui/button";
+import { ArrowDown } from "lucide-react";
+import React from "react";
+import BloodrootLogo from "../logo/bloodroot-logo";
 import Link from "next/link";
 
-export function Hero() {
+const Hero = () => {
   return (
-    <section className="relative w-full h-[90vh] min-h-[500px] flex items-center justify-center text-center">
-      {/* Dark overlay for text contrast over parallax bg */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-background/95"></div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-16">
-        <div className="space-y-4 sm:space-y-6 md:space-y-8">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tighter">
-            Bloodroot Tattoo Collective
-          </h1>
-          <p className="mx-auto max-w-[700px] text-base sm:text-lg md:text-xl text-muted-foreground">
-            Your Premier Destination for Custom Tattoos in Morgantown, West Virginia.
-            <br className="hidden md:inline" />
-            Expert Artists Specializing in Diverse Styles.
+    <div className="h-screen w-full flex flex-col items-center justify-center px-6">
+      <div className="md:mt-6 flex items-center justify-center">
+        <div className="text-center max-w-3xl">
+          <div className="mt-6 flex justify-center py-6">
+            <BloodrootLogo fillColor="white" width={600} />
+          </div>
+          <p className="mt-6 max-w-[70ch] xs:text-lg text-muted-foreground">
+            Your tattoo artwork should be as unique as you are. At Bloodroot Tattoo Collective,
+            our talented artists bring your vision to life with exceptional skill and creativity.
+            From bold traditional designs to intricate fine line work, we create custom art
+            that becomes a permanent part of your story.
           </p>
-        </div>
-        <div className="mt-8 sm:mt-10 md:mt-12 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
-          {/* Link to Artist Grid section */}
-          <Link href="/#artists" legacyBehavior passHref>
-            <Button variant="secondary" size="lg" className="w-full sm:w-auto min-w-[180px]">Meet Our Artists</Button>
-          </Link>
-          {/* Link to Contact section */}
-          <Link href="/#contact" legacyBehavior passHref>
-            <Button variant="default" size="lg" className="w-full sm:w-auto min-w-[180px]">Book an Appointment</Button>
-          </Link>
+          <div className="mt-12 flex flex-col sm:flex-row items-center sm:justify-center gap-4">
+            <Link href="/#artists" legacyBehavior passHref>
+              <Button
+                size="lg"
+                className="w-full sm:w-auto rounded-full text-base"
+              >
+                Meet the Artists <ArrowDown className="!h-5 !w-5" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
-} 
+};
+
+export default Hero;
