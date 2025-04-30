@@ -15,8 +15,8 @@ export interface Artist {
 // Define the list of artists
 export const artists: Artist[] = [
   {
-    name: "Kelechi Ohaya",
-    slug: "kelechi-ohaya",
+    name: "Kelechi Ejimofor",
+    slug: "kelechi-Ejimofor",
     image: "/images/artist-1-kelechi.webp",
     specialties: ["Illustrative", "Black & Grey", "Fine Line"],
     bio: "Kelechi brings unique visions to life with intricate illustrative and fine line work.",
