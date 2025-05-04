@@ -3,11 +3,13 @@ import { Layout } from './components/layout/Layout';
 import HomePage from './pages/HomePage';
 import { ArtistPage } from './pages/ArtistPage';
 import { NotFoundPage } from './pages/NotFoundPage';
+import ScrollToTop from './components/layout/ScrollToTop';
 // Import other pages here later
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />

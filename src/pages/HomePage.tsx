@@ -1,25 +1,22 @@
 import React, { useRef, useEffect } from 'react';
-// import { Link } from 'react-router-dom'; // Unused
-import BloodrootLogo from '../components/logo/bloodroot-logo';
-import { Button } from '../components/ui/button'; // Assuming button exists
-import { ArrowDown } from 'lucide-react'; // Assuming lucide-react is installed
+import BloodrootLogo from '@/components/logo/bloodroot-logo';
+import { Button } from '@/components/ui/button'; 
+import { ArrowDown } from 'lucide-react'; 
 import { gsap } from 'gsap';
-import { ArtistGrid } from '../components/home/ArtistGrid'; // Import ArtistGrid
+import { ArtistGrid } from '@/components/home/ArtistGrid'; 
 
 const HomePage: React.FC = () => {
   const arrowWrapperRef1 = useRef<HTMLDivElement>(null);
   const arrowWrapperRef2 = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // GSAP animation for arrows
     if (arrowWrapperRef1.current && arrowWrapperRef2.current) {
       gsap.to([arrowWrapperRef1.current, arrowWrapperRef2.current], {
-        y: -8, // Move up 8px
-        duration: 0.6,
+        y: -8,
         ease: "power1.inOut",
-        repeat: -1, // Repeat indefinitely
-        yoyo: true, // Animate back and forth
-        stagger: 0.1, // Slight delay between arrows
+        repeat: -1,
+        yoyo: true,
+        stagger: 0.1,
       });
     }
   }, []);
@@ -27,49 +24,14 @@ const HomePage: React.FC = () => {
   return (
     <>
       {/* Hero Section */}
-      <div 
-        style={{
-          display: 'flex',
-          flexDirection: 'column', // Stack logo and button vertically
-          justifyContent: 'center', // Center logo vertically initially
-          alignItems: 'center',
-          minHeight: '100vh', // Use full viewport height
-          padding: '2rem',
-          boxSizing: 'border-box'
-        }}
-      >
+      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minHeight: '100vh', padding: '2rem', boxSizing: 'border-box' }}>
         {/* Logo Section */} 
-        <div 
-          style={{
-            flexGrow: 1, // Allow logo section to take up available space
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            width: '100%'
-          }}
-        >
-          <BloodrootLogo 
-            fillColor="white" 
-            style={{
-              width: '90%', // Responsive width
-              maxWidth: '600px', // Max size
-              height: 'auto'
-            }}
-          />
+        <div style={{ flexGrow: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
+          <BloodrootLogo fillColor="white" style={{ width: '90%', maxWidth: '600px', height: 'auto' }} />
         </div>
 
         {/* Button Section */} 
-        <div 
-          style={{
-            paddingBottom: '6rem', // Increased padding to account for overlapping ArtistGrid
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            gap: '1rem',
-            position: 'relative', // Needed for z-index
-            zIndex: 20 // Ensure button is above the ArtistGrid overlap
-          }}
-        >
+        <div style={{ paddingBottom: '6rem', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem', position: 'relative', zIndex: 20 }}>
           <div ref={arrowWrapperRef1}>
             <ArrowDown style={{ width: '1.25rem', height: '1.25rem', color: 'white' }} />
           </div>
@@ -83,12 +45,11 @@ const HomePage: React.FC = () => {
             }}
           >
             <Button
-              // size="lg" // Assuming Button component takes size prop
-              // className="rounded-full text-xs sm:text-sm px-6" // Use inline styles or Tailwind if configured
+              size="lg"
               style={{
                 borderRadius: '9999px',
-                fontSize: '0.875rem', // sm text size
-                padding: '0.75rem 1.5rem' // Corresponds to px-6 py-3 roughly
+                fontSize: '0.875rem',
+                padding: '0.75rem 1.5rem'
               }}
             >
               Meet the Artists 
