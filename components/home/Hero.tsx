@@ -28,7 +28,7 @@ const Hero = () => {
     <div className="relative w-full min-h-screen py-4 px-5 sm:px-8 md:px-10 flex flex-col">
       {/* Center logo section */}
       <div className="flex items-center justify-center flex-grow">
-        <div className="w-full max-w-3xl text-center">
+        <div id="hero-logo-trigger" className="w-full max-w-3xl text-center">
           <BloodrootLogo 
             fillColor="white" 
             width="100%" 
