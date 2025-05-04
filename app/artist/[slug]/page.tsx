@@ -6,9 +6,16 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Instagram } from "lucide-react";
 
-export default async function ArtistPage({ params }: { params: { slug: string } }) {
-  // Find the artist based on the slug
-  const slug = params.slug;
+// Define proper params type
+type Props = {
+  params: {
+    slug: string;
+  };
+};
+
+export default async function ArtistPage({ params }: Props) {
+  // Await params to comply with Next.js dynamic params usage
+  const { slug } = await params;
   const artist = artists.find((a) => a.slug === slug);
 
   // If artist not found, show 404
@@ -21,7 +28,7 @@ export default async function ArtistPage({ params }: { params: { slug: string } 
       {/* Artist Header Section */}
       <div className="relative w-full h-[50vh] min-h-[400px] bg-zinc-900">
         <div className="absolute inset-0 bg-gradient-to-b from-zinc-900/70 to-zinc-900 z-10" />
-        <div className="absolute inset-0 bg-[url('/images/bg-tattoo.jpg')] bg-cover bg-center opacity-30" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-purple-900/20 via-zinc-900 to-blue-900/20 opacity-60" />
         
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
           <Link href="/?scrollToArtists=true" className="mb-6">

@@ -32,11 +32,7 @@ export default function RootLayout({
       >
         {/* Parallax Background Image */}
         <div 
-          className="fixed inset-0 bg-cover bg-center bg-fixed opacity-15 pointer-events-none bg-black z-0"
-          style={{ 
-            backgroundImage: "url('/images/bg-tattoo.jpg')", 
-            backgroundAttachment: "fixed"
-          }}
+          className="fixed inset-0 bg-gradient-to-br from-zinc-950 via-zinc-900 to-black opacity-20 pointer-events-none z-0"
           aria-hidden="true"
         />
         <div className="relative z-10 flex flex-col min-h-screen">
