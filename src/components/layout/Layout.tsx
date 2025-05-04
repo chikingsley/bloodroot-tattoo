@@ -1,6 +1,6 @@
 import React from 'react';
-import { Header } from './Header'; // Assuming Header is in the same directory
-import { Footer } from './Footer'; // Assuming Footer is in the same directory
+import { Header } from '@/components/layout/Header';
+import { Footer } from '@/components/layout/Footer'; 
 
 interface LayoutProps {
   children: React.ReactNode;

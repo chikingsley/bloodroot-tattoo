@@ -1,4 +1,3 @@
-import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { artists } from '@/data/artists'; // Adjusted path
 import { ArtistGallery } from '@/components/artists/ArtistGallery'; // Updated import path and name
@@ -37,9 +36,13 @@ export const ArtistPage: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-tr from-purple-900/20 via-zinc-900 to-blue-900/20 opacity-60" />
         
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
-          {/* Back Button - simplified for now */}
-          <Link to="/" className="mb-6 self-start"> {/* Adjusted Link */} 
-            <Button variant="outline" size="sm" className="gap-2 border-zinc-700 hover:bg-zinc-800">
+          {/* Back Button - More explicit styling for contrast */}
+          <Link to="/" className="mb-6 self-start"> 
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className="gap-2 border-zinc-400 bg-zinc-900/50 hover:bg-zinc-800/90 text-zinc-100 hover:border-zinc-300 hover:text-white transition-colors duration-200"
+            >
               <ArrowLeft className="h-4 w-4" />
               Back to Artists
             </Button>

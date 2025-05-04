@@ -1,10 +1,7 @@
-// 'use client' // Keep this if effects are used, otherwise remove for Vite
-// We can remove 'use client' if no client hooks are needed anymore
-
 import { Link } from 'react-router-dom'; // Changed from next/link
-import { Navigation } from './Navigation';
-import BloodrootLogo from '../logo/bloodroot-logo'; // Adjusted path
-import React, { useState } from 'react'; // Removed useEffect, useRef
+import { Navigation } from '@/components/layout/Navigation';
+import BloodrootLogo from '@/components/logo/bloodroot-logo'; // Adjusted path
+import { useState } from 'react'; // Removed useEffect, useRef
 
 export function Header() {
   const [isVisible, ] = useState(true); // Default to visible, removed setIsVisible as it's not used

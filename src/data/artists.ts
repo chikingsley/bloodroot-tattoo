@@ -17,7 +17,7 @@ export const artists: Artist[] = [
   {
     name: "Kelechi Ejimofor",
     slug: "kelechi-Ejimofor",
-    image: "/images/artist-1-kelechi.webp",
+    image: "/profile-photos/artist-1-kelechi.webp",
     specialties: ["Illustrative", "Black & Grey", "Fine Line"],
     bio: "Kelechi brings unique visions to life with intricate illustrative and fine line work.",
     instagram: "https://www.instagram.com/kelech/",
@@ -25,7 +25,7 @@ export const artists: Artist[] = [
   {
     name: "Alex Greene",
     slug: "alex-greene",
-    image: "/images/artist-2-alex.webp",
+    image: "/profile-photos/artist-2-alex.webp",
     specialties: ["Neo-Traditional", "Color Realism", "Botanical"],
     bio: "Alex specializes in vibrant color realism and neo-traditional designs, often inspired by nature.",
     instagram: "https://www.instagram.com/greenewitchtattoo/",
@@ -33,7 +33,7 @@ export const artists: Artist[] = [
   {
     name: "Jameson Quinn",
     slug: "jameson-quinn",
-    image: "/images/artist-3-jameson.webp",
+    image: "/profile-photos/artist-3-jameson.webp",
     specialties: ["American Traditional", "Blackwork", "Japanese Inspired"],
     bio: "Jameson offers bold American Traditional and striking blackwork tattoos.",
     instagram: "https://www.instagram.com/inkbyjameson/",

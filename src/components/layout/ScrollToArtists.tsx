@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect } from "react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams } from "react-router-dom";
 
 export default function ScrollToArtists() {
-  const searchParams = useSearchParams();
+  const [searchParams] = useSearchParams();
   const scrollToArtists = searchParams.get("scrollToArtists");
 
   useEffect(() => {

@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom';
-import { Button } from '../ui/button';
+import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
-import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 
 export function Navigation() {
-  // Navigation links array for easy updates
   const links = [
     { href: "/", label: "Home" },
     { href: "/#artists-section", label: "Artists" },

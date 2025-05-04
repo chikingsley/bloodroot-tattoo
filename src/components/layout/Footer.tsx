@@ -1,5 +1,3 @@
-// import { Link } from 'react-router-dom'; // No longer needed
-
 export function Footer() {
     // TODO: Replace with actual address and hours if different
   const addressLine1 = "1315 Airport Blvd. Building 2";
