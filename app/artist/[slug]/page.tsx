@@ -6,10 +6,12 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Instagram } from "lucide-react";
 
-export default async function ArtistPage(props: { params: { slug: string } }) {
-  const {
-    params: { slug },
-  } = await props;
+type Props = {
+  params: { slug: string };
+};
+
+export default async function ArtistPage({ params }: Props) {
+  const { slug } = await params;
   const artist = artists.find((a) => a.slug === slug);
 
   if (!artist) {
