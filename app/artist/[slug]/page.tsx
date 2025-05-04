@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Instagram } from "lucide-react";
 
-export default function ArtistPage({ params }: { params: { slug: string } }) {
+export default async function ArtistPage({ params }: { params: { slug: string } }) {
   // Find the artist based on the slug
   const slug = params.slug;
   const artist = artists.find((a) => a.slug === slug);
@@ -24,7 +24,7 @@ export default function ArtistPage({ params }: { params: { slug: string } }) {
         <div className="absolute inset-0 bg-[url('/images/bg-tattoo.jpg')] bg-cover bg-center opacity-30" />
         
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
-          <Link href="/#artists" className="mb-6">
+          <Link href="/?scrollToArtists=true" className="mb-6">
             <Button variant="outline" size="sm" className="gap-2">
               <ArrowLeft className="h-4 w-4" />
               Back to Artists
@@ -62,10 +62,25 @@ export default function ArtistPage({ params }: { params: { slug: string } }) {
                 href={artist.instagram} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-zinc-300 hover:text-white transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-md shadow-md hover:shadow-lg transition-all duration-300 group"
               >
                 <Instagram className="h-5 w-5" />
-                <span>Follow on Instagram</span>
+                <span>Book on Instagram</span>
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="16" 
+                  height="16" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  className="ml-1 transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
               </a>
             </div>
           </div>
