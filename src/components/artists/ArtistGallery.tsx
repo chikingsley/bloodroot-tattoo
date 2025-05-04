@@ -1,9 +1,4 @@
-"use client"; // Keep if state/effects are used
-
-import { useState } from "react"; // Added useState import
-// import Image from "next/image"; // Removed next/image
-
-// ... (alexMedia, kelechiMedia, jamesonMedia arrays remain the same) ...
+import { useState } from "react"; 
 
 // Alex's photos and videos from greenewitchtattoo-alex directory
 const alexMedia = [

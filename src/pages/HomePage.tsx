@@ -5,7 +5,7 @@ import { Button } from '../components/ui/button';
 import { ArrowDown } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ArtistGrid } from '../components/home/ArtistGrid';
-import { useHeaderVisibility } from '../context/HeaderVisibilityContext'; // Import context hook
+import { useHeaderVisibility } from '@/hooks/useHeaderVisibility'; // Updated import path
 
 const HomePage: React.FC = () => {
   const { setIsHeaderVisible } = useHeaderVisibility(); // Get setter from context

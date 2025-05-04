@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom'; // Changed from next/link
-import { Navigation } from './Navigation';
-import BloodrootLogo from '../logo/bloodroot-logo'; // Adjusted path
-import React from 'react'; // Removed useEffect, useRef
-import { useHeaderVisibility } from '../../context/HeaderVisibilityContext'; // Corrected path
+import { Navigation } from '@/components/layout/Navigation';
+import BloodrootLogo from '@/components/logo/bloodroot-logo'; // Adjusted path
+import { useHeaderVisibility } from '@/hooks/useHeaderVisibility'; // Updated import path
 
 export function Header() {
   const { isHeaderVisible } = useHeaderVisibility(); // Get state from context

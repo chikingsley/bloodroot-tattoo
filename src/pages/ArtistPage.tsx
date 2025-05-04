@@ -1,9 +1,8 @@
 import { useParams, Link } from 'react-router-dom';
-import { artists } from '@/data/artists'; // Adjusted path
-import { ArtistGallery } from '@/components/artists/ArtistGallery'; // Updated import path and name
-import { Button } from "@/components/ui/button"; // Adjusted path
+import { artists } from '@/data/artists'; 
+import { ArtistGallery } from '@/components/artists/ArtistGallery'; 
+import { Button } from "@/components/ui/button"; 
 import { ArrowLeft, Instagram } from "lucide-react";
-// Assuming NotFoundPage will be created later
 import { NotFoundPage } from './NotFoundPage'; 
 
 // Placeholder NotFoundPage - create this properly if needed

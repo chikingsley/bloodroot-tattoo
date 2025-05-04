@@ -1,11 +1,5 @@
-import React, { createContext, useState, useContext, ReactNode } from 'react';
-
-interface HeaderVisibilityContextProps {
-  isHeaderVisible: boolean;
-  setIsHeaderVisible: (isVisible: boolean) => void;
-}
-
-const HeaderVisibilityContext = createContext<HeaderVisibilityContextProps | undefined>(undefined);
+import { useState, ReactNode } from 'react';
+import { HeaderVisibilityContext } from './definitions'; // Import Context only
 
 export const HeaderVisibilityProvider = ({ children }: { children: ReactNode }) => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(false); // Default: Header is hidden
@@ -15,12 +9,4 @@ export const HeaderVisibilityProvider = ({ children }: { children: ReactNode }) 
       {children}
     </HeaderVisibilityContext.Provider>
   );
-};
-
-export const useHeaderVisibility = () => {
-  const context = useContext(HeaderVisibilityContext);
-  if (context === undefined) {
-    throw new Error('useHeaderVisibility must be used within a HeaderVisibilityProvider');
-  }
-  return context;
 }; 
