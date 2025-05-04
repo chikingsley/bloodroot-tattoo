@@ -6,19 +6,14 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Instagram } from "lucide-react";
 
-// Define proper params type
 type Props = {
-  params: {
-    slug: string;
-  };
+  params: { slug: string };
 };
 
 export default async function ArtistPage({ params }: Props) {
-  // Await params to comply with Next.js dynamic params usage
   const { slug } = await params;
   const artist = artists.find((a) => a.slug === slug);
 
-  // If artist not found, show 404
   if (!artist) {
     notFound();
   }
