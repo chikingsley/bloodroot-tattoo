@@ -2,42 +2,60 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import BloodrootLogo from "../logo/bloodroot-logo";
 import Link from "next/link";
-import FlowerModel from "../models/FlowerModel";
+import { gsap } from "gsap";
 
 const Hero = () => {
+  const arrowWrapperRef1 = useRef<HTMLDivElement>(null);
+  const arrowWrapperRef2 = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (arrowWrapperRef1.current && arrowWrapperRef2.current) {
+      gsap.to([arrowWrapperRef1.current, arrowWrapperRef2.current], {
+        y: -8,
+        duration: 0.6,
+        ease: "power1.inOut",
+        repeat: -1,
+        yoyo: true,
+        stagger: 0.1,
+      });
+    }
+  }, []);
+
   return (
-    <div className="h-screen w-full flex flex-col items-center justify-center px-5 sm:px-8 md:px-10 pt-16 sm:pt-0">
-      <div className="flex items-center justify-center w-full">
-        <div className="text-center w-full max-w-3xl">
-          <div className="h-64 w-full mb-4">
-            <FlowerModel />
+    <div className="relative w-full min-h-screen py-4 px-5 sm:px-8 md:px-10 flex flex-col">
+      {/* Center logo section */}
+      <div className="flex items-center justify-center flex-grow">
+        <div className="w-full max-w-3xl text-center">
+          <BloodrootLogo 
+            fillColor="white" 
+            width="100%" 
+            height="auto"
+            className="w-[90%] sm:w-[80%] md:w-[70%] max-w-[600px] mx-auto"
+          />
+        </div>
+      </div>
+      
+      {/* Fixed bottom section */}
+      <div className="w-full flex justify-center pb-8 mt-auto mb-10 sm:mb-16">
+        <div className="flex items-center gap-4">
+          <div ref={arrowWrapperRef1}>
+            <ArrowDown className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
           </div>
-          <div className="flex justify-center">
-            <BloodrootLogo 
-              fillColor="white" 
-              width="100%" 
-              height="auto"
-              className="w-[90%] sm:w-[80%] md:w-[70%] max-w-[600px]"
-            />
-          </div>
-          <p className="mt-6 sm:mt-8 text-sm sm:text-base md:text-lg text-muted-foreground px-4 sm:px-6">
-            Your tattoo artwork should be as unique as you are. At Bloodroot Tattoo Collective,
-            our talented artists bring your vision to life with exceptional skill and creativity.
-            From bold traditional designs to intricate fine line work, we create custom art
-            that becomes a permanent part of your story.
-          </p>
-          <div className="mt-6 sm:mt-8 md:mt-12 flex flex-col sm:flex-row items-center sm:justify-center gap-4">
-            <Link href="/#artists" legacyBehavior passHref>
-              <Button
-                size="lg"
-                className="w-full sm:w-auto rounded-full text-sm sm:text-base"
-              >
-                Meet the Artists <ArrowDown className="!h-4 !w-4 sm:!h-5 sm:!w-5" />
-              </Button>
-            </Link>
+          
+          <Link href="/#artists-section" legacyBehavior passHref>
+            <Button
+              size="lg"
+              className="rounded-full text-xs sm:text-sm px-6"
+            >
+              Meet the Artists 
+            </Button>
+          </Link>
+          
+          <div ref={arrowWrapperRef2}>
+            <ArrowDown className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
           </div>
         </div>
       </div>
