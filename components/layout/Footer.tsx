@@ -2,10 +2,11 @@ import Link from 'next/link';
 
 export function Footer() {
     // TODO: Replace with actual address and hours if different
-  const address = "123 Tattoo St, Morgantown, WV 26505"; // Example
-  const hours = "Tue - Sat: 11 AM - 7 PM | Sun - Mon: Closed"; // Example
-  const phone = "304-555-1234"; // Example
-  const email = "info@bloodroottattoo.com"; // Example
+  const addressLine1 = "1315 Airport Blvd. Building 2";
+  const addressLine2 = "Morgantown, WV 26505";
+  const hours = "Tue - Sat: 11 AM - 7 PM | Sun - Mon: Closed"; 
+  const phone = "304-555-1234"; 
+  const email = "info@bloodroottattoo.com"; 
   const studioInstagram = "https://www.instagram.com/bloodroottattoocollective/"; // Official IG
 
   return (
@@ -15,11 +16,12 @@ export function Footer() {
           {/* Location */}
           <div>
             <h3 className="font-semibold text-foreground text-lg mb-3 md:mb-4">Location</h3>
-            <p className="mb-2">{address}</p>
+            <p className="mb-2">{addressLine1}</p>
+            <p className="mb-2">{addressLine2}</p>
              <p className="mb-2">
                {/* Link to Google Maps */}
                <a
-                 href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`}
+                 href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${addressLine1} ${addressLine2}`)}`}
                  target="_blank"
                  rel="noopener noreferrer"
                  className="text-primary hover:text-primary/80 transition-colors"
