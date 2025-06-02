@@ -1,0 +1,110 @@
+---
+description: 
+globs: .tsx,.css,.ts
+alwaysApply: false
+---
+---
+description: Specific rules for UI updates and styling changes in the Bloodroot Tattoo project
+globs: ["**/*.tsx", "**/*.css", "**/*.ts"]
+alwaysApply: true
+---
+
+# UI Update Guidelines for Bloodroot Tattoo
+
+When making UI updates, follow these specific patterns and conventions:
+
+## Component Location Reference
+
+- **Artist Cards**: `src/components/home/TeamSection.tsx`
+- **Artist Data**: `src/data/artists.ts`
+- **Footer/QR Code**: `src/components/layout/Footer.tsx`
+- **Global Styles**: `src/index.css`
+
+## Color Palette
+
+- **Primary Green**: `#00A86B` (for new green frames)
+- **Background Dark**: `#1a1a1a`
+- **Accent Orange**: `#ff6b35`
+- **Text Light**: `#ffffff`
+
+## CSS Class Naming Convention
+
+Use TailwindCSS utility classes when possible. For custom styles:
+- Component-specific: `.artist-card`, `.artist-frame`
+- State modifiers: `.artist-card--highlighted`
+- BEM for complex components: `.footer__section`, `.footer__qr-code`
+
+## Component Update Patterns
+
+### Adding Borders/Frames
+```tsx
+// Use Tailwind border utilities
+<div className="border-2 border-green-500 rounded-lg">
+  {/* or custom color */}
+  <div className="border-2 rounded-lg" style={{ borderColor: '#00A86B' }}>
+```
+
+### Removing Elements
+```tsx
+// Comment out with explanation rather than deleting
+{/* QR Code removed per client request - Dec 2024
+<QRCodeComponent />
+*/}
+```
+
+### Updating Text Content
+```tsx
+// Use data files for text updates
+// src/data/artists.ts
+export const artists = [
+  {
+    name: "Kelechi", // Changed from "Kelechi Ejimofor"
+    // specialties: [...], // Removed per client request
+  }
+]
+```
+
+## Testing Checklist
+
+Before completing any UI update:
+1. ✅ Check responsive design (mobile, tablet, desktop)
+2. ✅ Verify no TypeScript errors: `bun run tsc --noEmit`
+3. ✅ Test in development: `bun dev`
+4. ✅ Check for console errors
+5. ✅ Ensure layout doesn't break when content is removed
+
+## File Structure for UI Components
+
+```
+src/
+├── components/
+│   ├── home/
+│   │   └── TeamSection.tsx  // Artist profile cards
+│   └── layout/
+│       └── Footer.tsx       // QR code location
+└── data/
+    └── artists.ts          // Artist names and data
+```
+
+## Common TailwindCSS Classes for This Project
+
+- Borders: `border-2`, `border-green-500`, `rounded-lg`
+- Spacing: `p-4`, `m-2`, `gap-4`
+- Layout: `grid`, `grid-cols-1 md:grid-cols-3`, `flex`
+- Typography: `text-white`, `text-lg`, `font-semibold`
+
+## Git Commit Message Format
+
+Use descriptive commits:
+```
+feat(ui): add green frames to artist profile cards
+fix(content): remove style description tags from artist profiles  
+refactor(data): update artist names to first names only
+```
+
+## Important Notes
+
+- **NEVER** delete code completely - comment it out with a note
+- **ALWAYS** test responsive design after changes
+- **PRESERVE** existing functionality unless explicitly asked to remove
+- **MAINTAIN** accessibility (alt tags, ARIA labels)

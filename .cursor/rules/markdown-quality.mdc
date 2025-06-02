@@ -1,0 +1,139 @@
+---
+description: 
+globs: .md,.mdx
+alwaysApply: false
+---
+---
+description: Ensures markdown files follow proper formatting standards to avoid common linting issues
+globs: ["**/*.md", "**/*.mdx"]
+alwaysApply: true
+---
+
+# Markdown Quality Standards
+
+When creating or editing markdown files, follow these formatting rules to ensure clean, consistent documentation that passes markdown linting:
+
+## Heading Rules (MD022)
+
+- **ALWAYS** surround headings with blank lines above and below
+- **NEVER** place content immediately after a heading without a blank line
+
+```markdown
+# Good Example
+
+Content here...
+
+## Another Heading  
+
+More content...
+```
+
+```markdown
+# Bad Example
+Content immediately after heading (wrong!)
+
+## Another Heading
+More content without space above (wrong!)
+```
+
+## List Formatting (MD032)
+
+- **ALWAYS** surround lists with blank lines before and after
+- This applies to both ordered (numbered) and unordered (bullet) lists
+
+```markdown
+Some paragraph text.
+
+- List item 1
+- List item 2  
+- List item 3
+
+Next paragraph after the list.
+```
+
+## Code Block Requirements (MD040, MD031)
+
+- **ALWAYS** specify a language for fenced code blocks
+- **ALWAYS** surround code blocks with blank lines
+
+```markdown
+Here's some explanation.
+
+```bash
+# Good: language specified and surrounded by blank lines
+npm install
+```
+
+More text continues here.
+```
+
+**NEVER** do this:
+```markdown
+```
+# Bad: no language specified
+```
+
+## File Endings (MD047, MD009)
+
+- **ALWAYS** end files with exactly one newline character
+- **NEVER** leave trailing spaces at the end of lines
+- Use exactly 2 spaces for line breaks in markdown, or 0 spaces
+
+## Line Length (MD013) - IGNORED
+
+- Line length checking is disabled for this project
+- Feel free to write longer lines when needed for readability
+- Focus on content clarity over arbitrary length limits
+
+## Duplicate Headings (MD024)
+
+- **AVOID** duplicate heading text within the same document
+- Use descriptive, unique headings
+- Add context to differentiate similar headings when needed
+
+## Practical Examples
+
+### Proper Document Structure:
+
+```markdown
+# Main Title
+
+Brief introduction paragraph.
+
+## Section Heading
+
+Some content here.
+
+### Subsection
+
+More detailed content.
+
+- List item with proper spacing
+- Another list item
+
+```bash
+# Code example with language
+npm run build
+```
+
+Final paragraph.
+```
+
+### Common Mistakes to Avoid:
+
+1. **Missing blank lines around headings**
+2. **Missing blank lines around lists** 
+3. **Code blocks without language specification**
+4. **Missing blank lines around code blocks**
+5. **Trailing whitespace**
+6. **Missing final newline**
+
+## When Writing Documentation:
+
+- Start with proper heading hierarchy (h1 → h2 → h3)
+- Use blank lines generously for visual separation
+- Always specify code block languages (`bash`, `javascript`, `json`, etc.)
+- End files with a single newline
+- Remove trailing spaces from all lines
+
+Following these rules ensures consistent, professional documentation that passes all markdown linting checks.

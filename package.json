@@ -7,6 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "lint:md": "markdownlint-cli2 \"docs/**/*.md\" \"README.md\"",
+    "lint:md:fix": "markdownlint-cli2 --fix \"docs/**/*.md\" \"README.md\"",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -33,9 +35,11 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
+    "markdownlint-cli2": "^0.18.1",
     "tw-animate-css": "^1.2.9",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.26.1",
-    "vite": "^6.3.1"
+    "vite": "^6.3.1",
+    "@types/bun": "latest"
   }
 }

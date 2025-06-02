@@ -1,54 +1,152 @@
-# React + TypeScript + Vite
+# Bloodroot Tattoo Studio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive website showcasing the talented artists and exceptional work at Bloodroot Tattoo Studio in Morgantown, WV.
 
-Currently, two official plugins are available:
+## 🎯 About
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Professional tattoo studio featuring three exceptional artists:
 
-## Expanding the ESLint configuration
+- **Alex Greene** (@greenewitchtattoo) - Neo-Traditional, Color Realism, Botanical
+- **Kelechi Ejimofor** (@kelech) - Illustrative, Black & Grey, Fine Line  
+- **Jameson Quinn** (@inkbyjameson) - American Traditional, Blackwork, Japanese Inspired
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Studio Location:** 1315 Airport Blvd. Building 2, Morgantown, WV 26505
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🚀 Quick Start
+
+```bash
+# Install dependencies
+bun install
+
+# Start development server
+bun dev
+
+# Build for production
+bun build
+
+# Preview production build
+bun preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🏗️ Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Framework**: React 19 + TypeScript
+- **Build Tool**: Vite 6.3.1 (fast, modern bundling)
+- **Package Manager**: Bun (faster than npm/yarn)
+- **Styling**: TailwindCSS 4.1.5 + Radix UI
+- **Animations**: GSAP 3.13.0
+- **Routing**: React Router DOM 7.5.3
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## 📁 Project Structure
+
+```text
+src/
+├── components/           # Reusable UI components
+│   ├── artists/         # Artist-specific components
+│   ├── home/           # Homepage components
+│   ├── layout/         # Layout components
+│   └── ui/             # Generic UI components
+├── context/            # React context providers
+├── data/               # Static data (artist info, portfolios)
+├── hooks/              # Custom React hooks
+├── pages/              # Route components
+└── lib/                # Utility functions
+
+public/
+├── greenewitchtattoo-alex/  # Alex's portfolio media
+├── jameson-photos/          # Jameson's portfolio media
+└── profile-photos/          # Artist profile images
 ```
+
+## ✨ Features
+
+- 🎨 **Artist Portfolios**: Individual galleries with photos and videos
+- 📱 **Responsive Design**: Optimized for all devices
+- ⚡ **Fast Performance**: Vite HMR + modern React patterns
+- 🔍 **SEO Optimized**: Meta tags, structured data, accessibility
+- 🎬 **Media Support**: Image galleries with video integration
+- 🎯 **Smooth Animations**: GSAP-powered transitions
+
+## 📚 Documentation
+
+- **[Project Overview](docs/PROJECT_OVERVIEW.md)** - Architecture & features overview
+- **[Technical Setup](docs/TECHNICAL_SETUP.md)** - Configuration & development guide
+- **[TODO List](docs/TODO.md)** - Current tasks & project management
+
+## 🔧 Development
+
+### Scripts
+
+```bash
+bun dev          # Development server (localhost:3000)
+bun build        # Production build
+bun preview      # Preview production build
+bun lint         # Run ESLint
+```
+
+### Key Development Features
+
+- **Hot Module Replacement (HMR)**: Instant updates
+- **TypeScript**: Full type safety
+- **ESLint**: Code quality enforcement
+- **Path Aliases**: Clean imports with `@/` prefix
+
+## 🚀 Deployment
+
+### Recommended Platforms
+
+- **Vercel**: Zero-config deployment with analytics
+- **Netlify**: Form handling and edge functions
+- **GitHub Pages**: Free hosting option
+
+### Build Output
+
+Optimized static files ready for any hosting platform:
+
+- Code splitting for optimal loading
+- Asset optimization for images/videos
+- SEO meta tags and structured data
+
+## 📊 Performance
+
+- **Bundle Size**: Optimized with manual chunks
+- **Image Loading**: Direct public folder access
+- **Animations**: Hardware-accelerated with GSAP
+- **Core Web Vitals**: Optimized for excellent scores
+
+## 🎨 Design System
+
+### Colors
+
+- Primary: Tattoo ink black (`#1a1a1a`)
+- Accent: Vibrant orange (`#ff6b35`)
+- Text: High contrast for accessibility
+
+### Typography
+
+- Clean, modern sans-serif
+- Optimized readability across devices
+- Proper heading hierarchy
+
+## 🤝 Contributing
+
+1. Follow the existing code style
+2. Add TypeScript types for all new code
+3. Update documentation for significant changes
+4. Test across different browsers and devices
+
+## 📞 Contact
+
+**Bloodroot Tattoo Studio**  
+1315 Airport Blvd. Building 2  
+Morgantown, WV 26505
+
+Follow our artists:
+
+- Alex: [@greenewitchtattoo](https://instagram.com/greenewitchtattoo)
+- Kelechi: [@kelech](https://instagram.com/kelech)
+- Jameson: [@inkbyjameson](https://instagram.com/inkbyjameson)
+
+---
+
+Built with ❤️ using modern web technologies for exceptional user experience.

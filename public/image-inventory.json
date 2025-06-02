@@ -1,0 +1,143 @@
+{
+  "alex": [
+    {
+      "filename": "alex-tattoo-001.jpg",
+      "type": "image",
+      "size": 88347
+    },
+    {
+      "filename": "alex-tattoo-002.jpg",
+      "type": "image",
+      "size": 162490
+    },
+    {
+      "filename": "alex-tattoo-003.jpg",
+      "type": "image",
+      "size": 132473
+    },
+    {
+      "filename": "alex-tattoo-004.jpg",
+      "type": "image",
+      "size": 167603
+    },
+    {
+      "filename": "alex-tattoo-005.jpg",
+      "type": "image",
+      "size": 248314
+    },
+    {
+      "filename": "alex-video-001.mp4",
+      "type": "video",
+      "size": 1168323
+    },
+    {
+      "filename": "alex-video-002.mp4",
+      "type": "video",
+      "size": 3187906
+    }
+  ],
+  "kelechi": [],
+  "jameson": [
+    {
+      "filename": "photo-1.jpg",
+      "type": "image",
+      "size": 263342
+    },
+    {
+      "filename": "photo-10.jpg",
+      "type": "image",
+      "size": 101845
+    },
+    {
+      "filename": "photo-11.jpg",
+      "type": "image",
+      "size": 133540
+    },
+    {
+      "filename": "photo-12.jpg",
+      "type": "image",
+      "size": 340973
+    },
+    {
+      "filename": "photo-13.jpg",
+      "type": "image",
+      "size": 131636
+    },
+    {
+      "filename": "photo-14.jpg",
+      "type": "image",
+      "size": 94006
+    },
+    {
+      "filename": "photo-15.jpg",
+      "type": "image",
+      "size": 138281
+    },
+    {
+      "filename": "photo-16.jpg",
+      "type": "image",
+      "size": 52749
+    },
+    {
+      "filename": "photo-17.jpg",
+      "type": "image",
+      "size": 91237
+    },
+    {
+      "filename": "photo-18.jpg",
+      "type": "image",
+      "size": 130693
+    },
+    {
+      "filename": "photo-19.jpg",
+      "type": "image",
+      "size": 188440
+    },
+    {
+      "filename": "photo-2.jpg",
+      "type": "image",
+      "size": 156457
+    },
+    {
+      "filename": "photo-20.jpg",
+      "type": "image",
+      "size": 104126
+    },
+    {
+      "filename": "photo-3.jpg",
+      "type": "image",
+      "size": 123781
+    },
+    {
+      "filename": "photo-4.jpg",
+      "type": "image",
+      "size": 172224
+    },
+    {
+      "filename": "photo-5.jpg",
+      "type": "image",
+      "size": 202833
+    },
+    {
+      "filename": "photo-6.jpg",
+      "type": "image",
+      "size": 51468
+    },
+    {
+      "filename": "photo-7.jpg",
+      "type": "image",
+      "size": 128943
+    },
+    {
+      "filename": "photo-8.jpg",
+      "type": "image",
+      "size": 147650
+    },
+    {
+      "filename": "photo-9.jpg",
+      "type": "image",
+      "size": 50264
+    }
+  ],
+  "lastUpdated": "2025-06-02T11:57:28.664Z"
+}

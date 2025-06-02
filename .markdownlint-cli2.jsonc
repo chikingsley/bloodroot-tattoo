@@ -1,0 +1,26 @@
+{
+  // Markdown linting configuration for Bloodroot Tattoo project
+  "config": {
+    // Disable line length rule as requested
+    "MD013": false,
+    
+    // Keep all other rules enabled for quality
+    "default": true,
+    
+    // Optional: customize specific rules if needed
+    "MD033": {
+      // Allow specific HTML elements if needed for docs
+      "allowed_elements": ["br", "details", "summary"]
+    }
+  },
+  
+  // Only lint our project files, not node_modules
+  "globs": [
+    "**/*.md",
+    "!node_modules/**",
+    "!old/**"
+  ],
+  
+  // Fix issues automatically when possible
+  "fix": true
+} 

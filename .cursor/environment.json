@@ -1,0 +1,18 @@
+{
+  "user": "ubuntu",
+  "dockerfile": ".cursor/Dockerfile",
+  "install": "bun install",
+  "start": "",
+  "terminals": [
+    {
+      "name": "dev-server",
+      "command": "bun dev --host",
+      "description": "Runs the Vite development server on port 3000"
+    },
+    {
+      "name": "type-check",
+      "command": "bun run tsc --noEmit --watch",
+      "description": "Watches for TypeScript errors in real-time"
+    }
+  ]
+} 
