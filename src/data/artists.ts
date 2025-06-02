@@ -23,7 +23,7 @@ export interface Artist {
 export const artists: Artist[] = [
   {
     name: "Kelechi Ejimofor",
-    slug: "kelechi-Ejimofor", 
+    slug: "kelechi-Ejimofor",
     image: "/profile-photos/artist-1-kelechi.webp",
     specialties: ["Illustrative", "Black & Grey", "Fine Line"],
     bio: "Kelechi brings unique visions to life with intricate illustrative and fine line work.",
@@ -34,7 +34,7 @@ export const artists: Artist[] = [
     ],
   },
   {
-    name: "Alex Greene", 
+    name: "Alex Greene",
     slug: "alex-greene",
     image: "/profile-photos/artist-2-alex.webp",
     specialties: ["Neo-Traditional", "Color Realism", "Botanical"],
@@ -80,7 +80,7 @@ export const artists: Artist[] = [
   },
   {
     name: "Jameson Quinn",
-    slug: "jameson-quinn", 
+    slug: "jameson-quinn",
     image: "/profile-photos/artist-3-jameson.webp",
     specialties: ["American Traditional", "Blackwork", "Japanese Inspired"],
     bio: "Jameson offers bold American Traditional and striking blackwork tattoos.",
