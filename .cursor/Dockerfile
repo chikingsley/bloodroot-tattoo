@@ -1,33 +1,47 @@
-# Base image with Node.js
+# Base image for Bloodroot Tattoo development environment
 FROM ubuntu:22.04
 
-# Install system dependencies
+# Avoid prompts from apt
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install system dependencies for React/Vite/Bun development
 RUN apt-get update && apt-get install -y \
     curl \
     unzip \
     git \
     build-essential \
     python3 \
+    ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Bun
+# Install Bun globally for root user
 RUN curl -fsSL https://bun.sh/install | bash
-
-# Add Bun to PATH
 ENV PATH="/root/.bun/bin:${PATH}"
 
-# Set working directory
-WORKDIR /workspace
+# Create non-root user for security
+RUN useradd -m -s /bin/bash ubuntu && \
+    usermod -aG sudo ubuntu
 
-# Install global dependencies that might be useful
+# Switch to non-root user and install Bun for ubuntu user
+USER ubuntu
+WORKDIR /home/ubuntu
+
+# Install Bun for ubuntu user
+RUN curl -fsSL https://bun.sh/install | bash
+ENV PATH="/home/ubuntu/.bun/bin:${PATH}"
+
+# Install global TypeScript for development
 RUN bun add -g typescript
 
-# Create a non-root user (optional but recommended)
-RUN useradd -m -s /bin/bash ubuntu
+# Set working directory for the project
+WORKDIR /home/ubuntu/workspace
 
-# Ensure the agent can use Bun
-USER ubuntu
-ENV PATH="/home/ubuntu/.bun/bin:${PATH}"
-RUN curl -fsSL https://bun.sh/install | bash
+# Expose ports for Vite development and preview servers
+EXPOSE 3000 3001
 
-WORKDIR /home/ubuntu/workspace 
+# Set environment variables for development
+ENV NODE_ENV=development
+ENV VITE_NODE_ENV=development
+
+# Default command (can be overridden)
+CMD ["/bin/bash"] 

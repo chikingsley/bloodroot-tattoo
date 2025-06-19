@@ -12,7 +12,6 @@ Branch: Create and work on feat/green-frames
 Files to modify: src/components/home/TeamSection.tsx
 
 Specific requirements:
-
 1. Add a 3px green border with color #00A86B to each artist profile card
 2. Make borders rounded with 8px radius
 3. Use TailwindCSS classes if possible (border-2 or border-[3px], rounded-lg)
@@ -20,7 +19,6 @@ Specific requirements:
 5. Ensure consistent styling across all three artist cards
 
 Testing:
-
 - Run `bun dev` and check the changes at localhost:3000
 - Verify cards look good on mobile (375px), tablet (768px), and desktop (1024px+)
 - Check for TypeScript errors with `bun run tsc --noEmit`
@@ -34,11 +32,10 @@ Make a single commit with message: "feat(ui): add green frames to artist profile
 You are working on the Bloodroot Tattoo website, a React/TypeScript project.
 
 Your task: Remove all style/specialty description tags from artist profiles
-Branch: Create and work on feat/remove-style-tags
+Branch: Create and work on feat/remove-style-tags  
 Files to modify: src/data/artists.ts and src/components/home/TeamSection.tsx
 
 Requirements:
-
 1. In src/data/artists.ts: Comment out (don't delete) the "specialties" array for each artist
 2. Add comment: "// Specialties removed per client request - Dec 2024"
 3. In TeamSection.tsx: Find where specialties are rendered and comment out that section
@@ -47,7 +44,6 @@ Requirements:
 Important: COMMENT OUT code instead of deleting it
 
 Testing:
-
 - Run `bun dev` and verify tags no longer appear
 - Check that card layout still looks good without the tags
 - Run `bun run tsc --noEmit` to ensure no TypeScript errors
@@ -65,13 +61,11 @@ Branch: Create and work on feat/first-names-only
 Files to modify: src/data/artists.ts
 
 Make these specific changes:
-
 1. Change "Kelechi Ejimofor" to "Kelechi"
-2. Change "Alex Greene" to "Alex"
+2. Change "Alex Greene" to "Alex"  
 3. Change "Jameson Quinn" to "Jameson"
 
 Testing:
-
 - Run `bun dev` and verify names display correctly
 - Check that the names update everywhere they appear
 - Run `bun run tsc --noEmit` for TypeScript validation
@@ -89,14 +83,12 @@ Branch: Create and work on feat/prepare-descriptions
 Files to modify: src/data/artists.ts
 
 Requirements:
-
 1. In src/data/artists.ts, find the "bio" field for each artist
 2. Add a TODO comment above each bio: "// TODO: Update with new bio from client"
 3. Replace current bio text with: "Bio coming soon..."
 4. Keep the bio field structure exactly the same (don't change types or remove fields)
 
 Testing:
-
 - Run `bun dev` and check that "Bio coming soon..." appears for each artist
 - Verify styling and layout remain unchanged
 - Run `bun run tsc --noEmit`
@@ -114,15 +106,13 @@ Branch: Create and work on feat/remove-qr-code
 Files to modify: src/components/layout/Footer.tsx
 
 Requirements:
-
 1. Find the QR code component in the Footer
-2. Comment it out (don't delete) with: {/\* QR Code removed per client request - Dec 2024
+2. Comment it out (don't delete) with: {/* QR Code removed per client request - Dec 2024
 3. Keep the "Follow Us" heading and any social media links/icons
 4. Adjust spacing/padding if needed to maintain good layout
 5. The footer should still look balanced without the QR code
 
 Testing:
-
 - Run `bun dev` and scroll to footer
 - Verify QR code is gone but "Follow Us" section still looks good
 - Check responsive design on mobile and desktop

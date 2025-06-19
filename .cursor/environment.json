@@ -1,18 +1,61 @@
 {
+  "$schema": "./docs/background-agents/environment.schema.json",
   "user": "ubuntu",
   "dockerfile": ".cursor/Dockerfile",
   "install": "bun install",
   "start": "",
+  "environment_variables": {
+    "NODE_ENV": "development",
+    "VITE_NODE_ENV": "development"
+  },
+  "ports": [
+    {
+      "port": 3000,
+      "description": "Vite development server",
+      "auto_forward": true
+    },
+    {
+      "port": 3001,
+      "description": "Vite preview server for production testing",
+      "auto_forward": false
+    }
+  ],
   "terminals": [
     {
       "name": "dev-server",
-      "command": "bun dev --host",
-      "description": "Runs the Vite development server on port 3000"
+      "command": "bun dev",
+      "description": "Runs the Vite development server on port 3000 with HMR",
+      "auto_start": false
     },
     {
       "name": "type-check",
       "command": "bun run tsc --noEmit --watch",
-      "description": "Watches for TypeScript errors in real-time"
+      "description": "Watches for TypeScript errors in real-time",
+      "auto_start": false
+    },
+    {
+      "name": "lint-watch",
+      "command": "bun lint",
+      "description": "Runs ESLint to check code quality",
+      "auto_start": false
+    },
+    {
+      "name": "preview",
+      "command": "bun preview",
+      "description": "Serves production build for testing (run 'bun build' first)",
+      "auto_start": false
+    },
+    {
+      "name": "build",
+      "command": "bun run build",
+      "description": "Creates optimized production build with TypeScript checking",
+      "auto_start": false
+    },
+    {
+      "name": "markdown-lint",
+      "command": "bun run lint:md",
+      "description": "Checks markdown documentation for formatting issues",
+      "auto_start": false
     }
   ]
 } 

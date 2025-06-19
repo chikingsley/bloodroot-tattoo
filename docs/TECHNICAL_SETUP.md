@@ -52,8 +52,8 @@ bun lint
 
 ```json
 {
-  "react": "^19.0.0",           // Latest React with concurrent features
-  "react-dom": "^19.0.0",      // DOM rendering
+  "react": "^19.0.0", // Latest React with concurrent features
+  "react-dom": "^19.0.0", // DOM rendering
   "react-router-dom": "^7.5.3" // Client-side routing
 }
 ```
@@ -62,8 +62,8 @@ bun lint
 
 ```json
 {
-  "vite": "^6.3.1",            // Fast build tool and dev server
-  "typescript": "~5.7.2",      // Type safety
+  "vite": "^6.3.1", // Fast build tool and dev server
+  "typescript": "~5.7.2", // Type safety
   "@vitejs/plugin-react": "^4.3.4" // React support for Vite
 }
 ```
@@ -72,10 +72,10 @@ bun lint
 
 ```json
 {
-  "tailwindcss": "^4.1.5",     // Utility-first CSS framework
+  "tailwindcss": "^4.1.5", // Utility-first CSS framework
   "@tailwindcss/vite": "^4.1.5", // Vite integration
   "@radix-ui/react-*": "^1.x", // Accessible UI primitives
-  "lucide-react": "^0.507.0"   // Icon library
+  "lucide-react": "^0.507.0" // Icon library
 }
 ```
 
@@ -83,7 +83,7 @@ bun lint
 
 ```json
 {
-  "gsap": "^3.13.0"            // Professional animation library
+  "gsap": "^3.13.0" // Professional animation library
 }
 ```
 
@@ -91,7 +91,7 @@ bun lint
 
 ```json
 {
-  "eslint": "^9.22.0",         // Code linting
+  "eslint": "^9.22.0", // Code linting
   "typescript-eslint": "^8.26.1" // TypeScript-specific linting
 }
 ```
@@ -162,7 +162,7 @@ bun run prettier --check .
 # Unit tests (when added)
 bun test
 
-# E2E tests (when added)  
+# E2E tests (when added)
 bun test:e2e
 ```
 

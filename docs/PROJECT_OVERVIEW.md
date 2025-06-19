@@ -52,7 +52,7 @@ src/
 
 public/
 ├── greenewitchtattoo-alex/  # Alex's portfolio media
-├── jameson-photos/          # Jameson's portfolio media  
+├── jameson-photos/          # Jameson's portfolio media
 ├── profile-photos/          # Artist profile images
 │   └── kelech-kelechi/     # Kelechi's additional media
 └── vite.svg                # Default Vite favicon (needs replacement)
@@ -132,6 +132,6 @@ bun lint     # Run ESLint
 
 ## 📍 Studio Information
 
-**Bloodroot Tattoo Studio**  
-1315 Airport Blvd. Building 2  
+**Bloodroot Tattoo Studio**
+1315 Airport Blvd. Building 2
 Morgantown, WV 26505
