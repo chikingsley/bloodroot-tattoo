@@ -15,9 +15,9 @@ interface ArtistCardProps {
 
 export function ArtistCard({ artist }: ArtistCardProps) {
   return (
-    <Card className="overflow-hidden transition-all hover:shadow-md dark:hover:shadow-primary/5 group bg-zinc-800/80 backdrop-blur-sm p-0 border-zinc-700/50">
+    <Card className="overflow-hidden transition-all hover:shadow-md dark:hover:shadow-primary/5 group bg-zinc-800/80 backdrop-blur-sm p-0 border-zinc-700/50 border-[3px] border-[#00A86B] rounded-lg">
       <Link to={`/artist/${artist.slug}`}>
-        <div className="block relative w-full aspect-square overflow-hidden rounded-t-lg">
+        <div className="block relative w-full aspect-square overflow-hidden">
           <img
             src={artist.image}
             alt={`Tattoo artist ${artist.name}`}
