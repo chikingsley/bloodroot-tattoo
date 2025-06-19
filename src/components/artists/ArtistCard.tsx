@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -33,13 +32,6 @@ export function ArtistCard({ artist }: ArtistCardProps) {
             <CardTitle className="text-lg sm:text-xl mb-2 hover:text-purple-400 transition-colors text-zinc-100">{artist.name}</CardTitle>
           </div>
         </Link>
-        <div className="flex flex-wrap gap-1 mb-3">
-          {artist.specialties.slice(0, 3).map((specialty) => (
-            <Badge key={specialty} variant="secondary" className="text-xs bg-zinc-700 text-zinc-300">
-              {specialty}
-            </Badge>
-          ))}
-        </div>
         <p className="text-xs sm:text-sm text-zinc-400 mb-4 line-clamp-2">{artist.bio}</p>
       </CardContent>
       <CardFooter className="p-4 pt-0 sm:p-5 sm:pt-0">

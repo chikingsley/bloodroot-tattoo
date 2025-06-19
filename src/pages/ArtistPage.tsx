@@ -63,17 +63,6 @@ export const ArtistPage: React.FC = () => {
             <div className="text-center md:text-left">
               <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">{artist.name}</h1>
               
-              <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-4">
-                {artist.specialties.map((specialty, index) => (
-                  <span 
-                    key={index}
-                    className="px-3 py-1 bg-zinc-800 text-zinc-300 rounded-full text-sm"
-                  >
-                    {specialty}
-                  </span>
-                ))}
-              </div>
-              
               <p className="text-zinc-300 max-w-2xl mb-6">{artist.bio}</p>
               
               {/* Instagram Button */}

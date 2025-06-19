@@ -13,20 +13,20 @@ export interface Artist {
   name: string;
   slug: string; // URL-friendly identifier (e.g., "kelechi-ohaya")
   image: string; // Path to the image in /public
-  specialties: string[];
   bio: string; // A short bio for the main grid, maybe a longer one for the profile
   instagram: string; // Full URL
   portfolio: MediaItem[]; // Portfolio media items
+  bookingLink?: string;
+  email?: string;
 }
 
 // Define the list of artists
 export const artists: Artist[] = [
   {
-    name: "Kelechi Ejimofor",
-    slug: "kelechi-Ejimofor",
+    name: "Kelechi",
+    slug: "kelechi",
     image: "/profile-photos/artist-1-kelechi.webp",
-    specialties: ["Illustrative", "Black & Grey", "Fine Line"],
-    bio: "Kelechi brings unique visions to life with intricate illustrative and fine line work.",
+    bio: "Interested in black and grey and color tattoos. Styles: illustrative, realism, surrealism, sacred geometry, nature, & push board Pop culture related",
     instagram: "https://www.instagram.com/kelech/",
     portfolio: [
       // Kelechi's portfolio will be added here
@@ -34,11 +34,10 @@ export const artists: Artist[] = [
     ],
   },
   {
-    name: "Alex Greene",
-    slug: "alex-greene",
+    name: "Alex",
+    slug: "alex",
     image: "/profile-photos/artist-2-alex.webp",
-    specialties: ["Neo-Traditional", "Color Realism", "Botanical"],
-    bio: "Alex specializes in vibrant color realism and neo-traditional designs, often inspired by nature.",
+    bio: "Interested in black and grey fine line, botanical, neo traditional, realism",
     instagram: "https://www.instagram.com/greenewitchtattoo/",
     portfolio: [
       {
@@ -79,12 +78,13 @@ export const artists: Artist[] = [
     ],
   },
   {
-    name: "Jameson Quinn",
-    slug: "jameson-quinn",
+    name: "Jameson",
+    slug: "jameson",
     image: "/profile-photos/artist-3-jameson.webp",
-    specialties: ["American Traditional", "Blackwork", "Japanese Inspired"],
-    bio: "Jameson offers bold American Traditional and striking blackwork tattoos.",
+    bio: "Jameson offers bold American-Traditional and striking blackwork tattoos. Nature tattoos (birds, bugs, reptiles & amphibians, flora & fauna), black and gray",
     instagram: "https://www.instagram.com/inkbyjameson/",
+    bookingLink: "https://forms.gle/tVswQkUybfLgfyj79",
+    email: "catbyjameson@gmail.com",
     portfolio: [
       {
         src: "/jameson-photos/photo-1.jpg",
