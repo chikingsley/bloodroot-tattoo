@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -15,9 +14,9 @@ interface ArtistCardProps {
 
 export function ArtistCard({ artist }: ArtistCardProps) {
   return (
-    <Card className="overflow-hidden transition-all hover:shadow-md dark:hover:shadow-primary/5 group bg-zinc-800/80 backdrop-blur-sm p-0 border-zinc-700/50">
+    <Card className="overflow-hidden transition-all hover:shadow-md dark:hover:shadow-primary/5 group bg-zinc-800/80 backdrop-blur-sm p-0 border-zinc-700/50 border-[3px] border-[#00A86B] rounded-lg">
       <Link to={`/artist/${artist.slug}`}>
-        <div className="block relative w-full aspect-square overflow-hidden rounded-t-lg">
+        <div className="block relative w-full aspect-square overflow-hidden">
           <img
             src={artist.image}
             alt={`Tattoo artist ${artist.name}`}
@@ -33,13 +32,6 @@ export function ArtistCard({ artist }: ArtistCardProps) {
             <CardTitle className="text-lg sm:text-xl mb-2 hover:text-purple-400 transition-colors text-zinc-100">{artist.name}</CardTitle>
           </div>
         </Link>
-        <div className="flex flex-wrap gap-1 mb-3">
-          {artist.specialties.slice(0, 3).map((specialty) => (
-            <Badge key={specialty} variant="secondary" className="text-xs bg-zinc-700 text-zinc-300">
-              {specialty}
-            </Badge>
-          ))}
-        </div>
         <p className="text-xs sm:text-sm text-zinc-400 mb-4 line-clamp-2">{artist.bio}</p>
       </CardContent>
       <CardFooter className="p-4 pt-0 sm:p-5 sm:pt-0">

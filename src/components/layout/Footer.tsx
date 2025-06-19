@@ -2,7 +2,7 @@ export function Footer() {
     // TODO: Replace with actual address and hours if different
   const addressLine1 = "1315 Airport Blvd. Building 2";
   const addressLine2 = "Morgantown, WV 26505";
-  const hours = "Tue - Sat: 11 AM - 7 PM | Sun - Mon: Closed"; 
+  const hours = "By appointment only except for seasonal flash walk in events. Contact artist directly to book";
   const phone = "304-555-1234"; 
   const email = "info@bloodroottattoo.com"; 
   const studioInstagram = "https://www.instagram.com/bloodroottattoocollective/"; // Official IG
