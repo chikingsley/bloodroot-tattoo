@@ -25,7 +25,7 @@ export const artists: Artist[] = [
   {
     name: "Kelechi",
     slug: "kelechi",
-    image: "/profile-photos/artist-1-kelechi.webp",
+    image: "/artists/kelechi/profile.webp",
     bio: "Interested in black and grey and color tattoos. Styles: illustrative, realism, surrealism, sacred geometry, nature, & push board Pop culture related",
     instagram: "https://www.instagram.com/kelech/",
     portfolio: [
@@ -36,7 +36,7 @@ export const artists: Artist[] = [
   {
     name: "Alex",
     slug: "alex",
-    image: "/profile-photos/artist-2-alex.webp",
+    image: "/artists/alex/profile.webp",
     bio: "Interested in black and grey fine line, botanical, neo traditional, realism",
     instagram: "https://www.instagram.com/greenewitchtattoo/",
     portfolio: [
@@ -80,7 +80,7 @@ export const artists: Artist[] = [
   {
     name: "Jameson",
     slug: "jameson",
-    image: "/profile-photos/artist-3-jameson.webp",
+    image: "/artists/jameson/profile.webp",
     bio: "Jameson offers bold American-Traditional and striking blackwork tattoos. Nature tattoos (birds, bugs, reptiles & amphibians, flora & fauna), black and gray",
     instagram: "https://www.instagram.com/inkbyjameson/",
     bookingLink: "https://forms.gle/tVswQkUybfLgfyj79",
