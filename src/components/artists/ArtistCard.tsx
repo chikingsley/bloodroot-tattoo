@@ -32,7 +32,7 @@ export function ArtistCard({ artist }: ArtistCardProps) {
             <CardTitle className="text-lg sm:text-xl mb-2 hover:text-purple-400 transition-colors text-zinc-100">{artist.name}</CardTitle>
           </div>
         </Link>
-        <p className="text-xs sm:text-sm text-zinc-400 mb-4 line-clamp-2">{artist.bio}</p>
+        <p className="text-xs sm:text-sm text-zinc-400 mb-4">{artist.bio}</p>
       </CardContent>
       <CardFooter className="p-4 pt-0 sm:p-5 sm:pt-0">
         <Link to={`/artist/${artist.slug}`} className="w-full">
